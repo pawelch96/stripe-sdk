@@ -8,12 +8,19 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.5.0-nullsafety.1"
+  auto_size_text:
+    dependency: transitive
+    description:
+      name: auto_size_text
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.1.0"
   awesome_card:
     dependency: "direct main"
     description:
       path: "."
       ref: HEAD
-      resolved-ref: b8e77d72e9d7f99dc5818b005c2636072a435b55
+      resolved-ref: "6379ada8062712b1b50c9cb5177784d575b70ce1"
       url: "https://github.com/pawelch96/AwesomeCard"
     source: git
     version: "1.1.0"
