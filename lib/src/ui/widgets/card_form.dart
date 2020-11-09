@@ -61,7 +61,7 @@ class _CardFormState extends State<CardForm> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 16.0),
+              padding: const EdgeInsets.only(top: 16.0, bottom: 16.0),
               child: CreditCard(
                 cardNumber: _validationModel.number ?? '',
                 cardExpiry: cardExpiry,

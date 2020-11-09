@@ -43,7 +43,12 @@ class _CardNumberFormFieldState extends State<CardNumberFormField> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 62,
       child: TextFormField(
+        expands: true,
+        maxLines: null,
+        minLines: null,
+        textAlignVertical: TextAlignVertical.center,
         initialValue: widget.initialValue,
         controller: widget.textEditingController,
         inputFormatters: [maskFormatter],

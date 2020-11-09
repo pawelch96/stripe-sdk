@@ -35,7 +35,12 @@ class _CardCvcFormFieldState extends State<CardCvcFormField> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 62,
       child: TextFormField(
+        expands: true,
+        maxLines: null,
+        minLines: null,
+        textAlignVertical: TextAlignVertical.center,
         initialValue: widget.initialValue,
         inputFormatters: [maskFormatter],
         onChanged: widget.onChanged,
