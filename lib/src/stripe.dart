@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:math';
+import 'dart:io' show Platform;
 
 import 'package:flutter/cupertino.dart';
 import 'package:uni_links/uni_links.dart';
@@ -91,6 +92,9 @@ class Stripe {
       'payment_method': paymentMethod
     });
     if (intent['status'] == 'requires_action') {
+      if (Platform.isIOS) {
+        return Future.value(intent);
+      }
       return _handleSetupIntent(intent['next_action']);
     } else {
       return Future.value(intent);
@@ -107,6 +111,9 @@ class Stripe {
     final paymentIntent =
         await api.confirmPaymentIntent(paymentIntentClientSecret, data: data);
     if (paymentIntent['status'] == 'requires_action') {
+      if (Platform.isIOS) {
+        return Future.value(paymentIntent);
+      }
       return authenticatePaymentWithNextAction(paymentIntent['next_action']);
     } else {
       return Future.value(paymentIntent);
