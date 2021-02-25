@@ -35,7 +35,7 @@ class _CardCvcFormFieldState extends State<CardCvcFormField> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 62,
+      height: 72,
       child: TextFormField(
         expands: true,
         maxLines: null,

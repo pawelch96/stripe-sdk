@@ -61,7 +61,7 @@ class _CardExpiryFormFieldState extends State<CardExpiryFormField> {
             '${CardExpiryFormField.defaultMonthMask}/${CardExpiryFormField.defaultYearMask}');
 
     return Container(
-      height: 62,
+      height: 72,
       child: TextFormField(
         expands: true,
         maxLines: null,
